@@ -225,8 +225,8 @@ nav {
 }
 
 iframe {
-  width: 280px;
-  height: 168px;
+  padding: auto;
+  width: 100%;
 }
 
 .maxi-container {
