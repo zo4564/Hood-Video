@@ -368,5 +368,6 @@ footer {
   }
   #panel-container-3 {
     flex-direction: row;
+    height: 80%;
   }
 }
