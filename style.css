@@ -5,7 +5,8 @@ html {
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #1e1d36;
+  background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(14,25,47,1) 27%, rgba(6,6,38,1) 46%, rgba(41,64,115,1) 60%, rgba(1,44,141,1) 71%, rgba(0,0,0,1) 100%);
 }
 
 h1 {
@@ -34,6 +35,18 @@ a {
   font-size: 28px;
 }
 
+#ig {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#ig img {
+  width:32px;
+  height: 32px;
+}
+
 #background-video video{
   background-color: #000;
   width: 100%;
@@ -58,7 +71,7 @@ a {
 div {
   margin: 20px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.288);
+  /*background-color: rgba(0, 0, 0, 0.288);*/
   color:#fff;
 }
 
@@ -72,6 +85,7 @@ div {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  overflow: hidden;
 }
 
 #landing video {
@@ -83,7 +97,7 @@ div {
   width: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   z-index: 0;
   margin: 0;
   padding: 0;
@@ -93,10 +107,33 @@ div {
   align-self: center;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin:  15px;
   background-color: rgba(255, 255, 255, 0.123);
   border-radius: 50%;
+  transition: 0.3s;
 }
+#start-button:hover {
+  
+   /* background-color: #3fff00;
+    
+    box-shadow:
+    0px 0px 10px rgba(100, 255, 0, 0.7),
+    0px 0px 20px rgba(100, 255, 0, 0.75),
+    0px 0px 40px rgba(100, 255, 0, 0.85),
+    0px 0px 80px rgba(100, 255, 0, 0.95),
+    0px 0px 100px rgba(100, 255, 0, 0.8);
+    transition: 0.3s;*/
+    background-color: rgb(255, 247, 141);
+    
+    box-shadow:
+    0px 0px 10px rgba(239, 219, 0, 0.7),
+    0px 0px 20px rgba(239, 219, 0, 0.75),
+    0px 0px 40px rgba(239, 219, 0, 0.85),
+    0px 0px 80px rgba(239, 219, 0, 0.95),
+    0px 0px 100px rgba(239, 219, 0, 0.8);
+    transition: 0.3s;
+    
+  }
 
 #start-button a {
   height: 64px;
@@ -119,7 +156,6 @@ nav {
   display:flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.288);
   font-family: 'Bebas Neue', cursive;
   font-size: 32px;
 }
@@ -127,6 +163,7 @@ nav {
 #nav-links {
   display: flex;
   flex-direction: column;
+  
 }
  #nav-links a{
   text-decoration: none;
@@ -135,6 +172,8 @@ nav {
   color: #fff;
   margin: 15px;
   padding: 15px;
+  transition: 0.3s;
+  
  }
 
  #nav-links p{
@@ -143,35 +182,46 @@ nav {
   color: #fff;
   margin: 15px;
   padding: 15px;
+  transition: 0.3s;
  }
  
  #nav-links a:hover{
   color:#EFDB32;
+  transition: 0.3s;
+  font-size: 32px;
 }
 
 .button {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.74);
   border-radius: 25px;
   display: flex;
   justify-content: center;
   margin-top: 0;
+  border: solid 2px;
+  border-color: rgba(255, 255, 255, 0.267);
+  transition: 0.3s;
 }
 
 .button a{
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
 .button:hover {
-  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 247, 141);
+  background-color: rgb(0, 0, 0);
+    box-shadow:
+    0px 0px 10px rgba(239, 219, 0, 0.7),
+    0px 0px 20px rgba(239, 219, 0, 0.75),
+    0px 0px 40px rgba(239, 219, 0, 0.85),
+    0px 0px 80px rgba(239, 219, 0, 0.95),
+    0px 0px 100px rgba(239, 219, 0, 0.8);
+    transition: 0.3s;
 }
 
-.button a:hover {
-  color:#000;
-}
 
 #o-nas {
   display: flex;
@@ -203,7 +253,7 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   height: fit-content;
-  width: 100vw;
+  width: 95vw;
   margin: 0;
   padding: 0;
 }
@@ -216,22 +266,28 @@ nav {
   background-color: #000;
   height: max-content;
   margin: 0;
-  padding: 30px;
+  padding: 0;
 }
 #galeria h1 {
   padding: 11px;
+  width: 95vw;
   margin-bottom: 0;
   text-align: center;
 }
 
+#kontakt {
+  padding: 0;
+}
+
 iframe {
-  padding: auto;
-  width: 100%;
+  width: 280px;
+  height: 168px;
 }
 
 .maxi-container {
   height: fit-content;
-  width: 100vw;
+  width: 100%;
+  padding-top:30px;
   margin: 0;
   display: flex;
   flex-wrap:wrap;
@@ -246,7 +302,7 @@ iframe {
   display:flex;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 100vw;
+  width: 95vw;
 }
 #panel-container-2 {
   display:flex;
@@ -270,8 +326,12 @@ iframe {
   background-color: #000;
   border-radius: 15px;
 }
+#panel-container-3 div.panel{
+  background-color: rgba(0, 0, 0, 0);
+}
 .panel h3 {
   margin-bottom: 0;
+  margin-top: 5px;
 }
 .logo {
   width: 64px;
@@ -318,6 +378,7 @@ footer {
     height: 100vh;
     margin: 20px;
     margin-top: -5px;
+    padding-top: 4%;
   }
   #background-video {
     width: 100%;
@@ -354,11 +415,19 @@ footer {
   }
   .button a {
     font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   #panel-container-1 {
     flex-direction: row;
     height: 80vh;
   }
+
+  #panel-container-1 .panel {
+    height: 50%;
+    padding:40px;
+  }
+
   .panel {
     width: 20vw;
   }
@@ -368,6 +437,5 @@ footer {
   }
   #panel-container-3 {
     flex-direction: row;
-    height: 80%;
   }
 }
